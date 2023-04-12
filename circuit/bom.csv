@@ -1,0 +1,5 @@
+﻿Name,Menge,Komponente
+"U1",1," Arduino Uno R3"
+"U2",1," Motortreiber mit H-Brückenschaltung"
+"M1, M2",2," Hobby-Getriebemotor"
+"D1, D3, D2, D4, D5, D6, D8, D9",8," Diode"
