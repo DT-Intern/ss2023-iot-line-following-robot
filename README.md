@@ -62,6 +62,10 @@ The IoT device can be accessed and used over the webinterface. But the Arduino d
 
 6 directories, 16 files
 ```
+## Additional Learnings
+### Circuit
+To reduce arduino pins and LOC, we decided to integrate the inverter to control the motors. 
+For the circuit to work, the inverter requires one pull up resistor per entry, which connects the input with the pin on the arduino to Vcc.
 
 ## References
 
