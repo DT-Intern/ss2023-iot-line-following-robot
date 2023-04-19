@@ -30,11 +30,8 @@ lol
 
 ## Folder structure
 
-```
 lol
 
-6 directories, 16 files
-```
 ## Additional Learnings
 ### Circuit
 To reduce arduino pins and LOC, we decided to integrate the inverter to control the motors. 
