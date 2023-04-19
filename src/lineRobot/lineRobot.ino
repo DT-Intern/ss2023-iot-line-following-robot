@@ -1,9 +1,10 @@
 //Motor A
 const int inv = 7; //Input from inverter
 const int Vinh  = 10;  // Pin  1 of L293
+
 //Motor B
-//const int Vinh2  = 9;  // Pin  9 of L293
-//const int inv2  = 3;  // Input from inverter
+const int Vinh2  = 9;  // Pin  9 of L293
+const int inv2  = 3;  // Input from inverter
 
 //Infrarot sensor
 int Analogwert;
@@ -24,8 +25,8 @@ void setup(){
     pinMode(inv, OUTPUT);
     pinMode(Vinh, OUTPUT);
   
-    //pinMode(inv2, OUTPUT);
-    //pinMode(Vinh2, OUTPUT);        
+    pinMode(inv2, OUTPUT);
+    pinMode(Vinh2, OUTPUT);        
 }
 
 
@@ -49,17 +50,35 @@ void loop(){
   Serial.println(QRE_Value3); 
   
 //This code  will turn Motor A clockwise for 2 sec.
-    digitalWrite(inv, LOW);
-    digitalWrite(Vinh, HIGH);
+//Pause
+    //digitalWrite(inv, HIGH);//ruchtung "vorwärts"
+   // digitalWrite(Vinh, LOW);//motor aus
   
-    //digitalWrite(inv2, HIGH);
-    //digitalWrite(Vinh2, HIGH);
+    //digitalWrite(inv2, HIGH);//ruchtung "vorwärts"
+    //digitalWrite(Vinh2, LOW);//motor aus
+    //delay(2000);
+
+    //digitalWrite(inv, LOW);//richtung rückwärts
+    //digitalWrite(Vinh, LOW);//motor aus
+  
+    //digitalWrite(inv2, LOW);//richtung rückwärts
+    //digitalWrite(Vinh2, LOW);//motor aus
+    //delay(2000);
+    digitalWrite(inv, LOW);//richtung rückwärts
+    digitalWrite(Vinh, HIGH);//motor an
+  
+    digitalWrite(inv2, LOW);//richtung rückwärts
+    digitalWrite(Vinh2, HIGH);//motor an
     delay(2000);
   
-  	digitalWrite(Vinh, HIGH);
-  	digitalWrite(inv, HIGH);
+  //lets go
+  	
+  	digitalWrite(inv, HIGH);//richtung vorwärts
+    digitalWrite(Vinh, HIGH);//motor an
 
-  	//digitalWrite(Vinh2, HIGH);
-  	//digitalWrite(inv2, LOW);
+  	digitalWrite(inv2, HIGH);//richtung vorwärts
+    digitalWrite(Vinh2, HIGH);//motor an
   	delay(2000);
+//pause
+  
 }
