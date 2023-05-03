@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IoT Surface LDR</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    </head>
+    <body>
+        <div class="ui container" style="margin: 1rem">
+            <h1>IoT Surface LDR Dashboard</h1>
+            <h3 style="margin-top: 0; margin-bottom: 2.5rem;">By Maximilian Fluegel, Alina Simon and Jannes Bikker</h3>
+            <button id="measureButton" class="ui fluid labeled icon button primary" style="margin-top: 1rem" onclick="measure()">
+                <i id="measureButtonIcon" class="tint icon"></i>
+                Start Prototype
+            </button>
+        </div>
+        <script>
+            const measureButton = document.getElementById("measureButton");
+            const measureButtonIcon = document.getElementById("measureButtonIcon");
+
+            const measure = () => {
+                fetch("http://192.168.63.31/action=1")
+            };
+        </script>
+    </body>
+</html>
